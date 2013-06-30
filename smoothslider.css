@@ -1,0 +1,303 @@
+.carousel .viewport {
+  float: left;
+  width: 960px;
+  height: 330px;
+  overflow: hidden;
+  position: relative;
+}
+.carousel .carousel-wrapper {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  -webkit-transition-property: -webkit-transform;
+  -moz-transition-property: -moz-transform;
+  transition-property: transform;
+  -webkit-transition-duration: 1s;
+  -moz-transition-duration: 1s;
+  transition-duration: 1s;
+  -webkit-transition-timing-function: ease-in-out;
+  -moz-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+}
+.carousel .carousel-slide {
+  float: left;
+  margin: 0 20px 0 0;
+  height: 330px;
+  width: 960px;
+}
+.carousel .carousel-pager {
+  overflow: hidden;
+  list-style: none;
+  clear: both;
+  margin: 0 0 0 45px;
+}
+.carousel .carousel-pager li {
+  float: left;
+  width: 33%;
+}
+.carousel .animation_3d .carousel-wrapper {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+.carousel .animation_2d .carousel-wrapper {
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  transform: translateX(0);
+}
+
+/**
+ * =============================================================================
+ *
+ * If you want to change the carousel size animation, delete everything after this and replace it with your own code.
+ *
+ * =============================================================================
+ */
+
+.carousel .animation_3d .slide-position-0 {
+  -webkit-transform: translate3d(0px, 0, 0);
+  -moz-transform: translate3d(0px, 0, 0);
+  -ms-transform: translate3d(0px, 0, 0);
+  transform: translate3d(0px, 0, 0);
+}
+.carousel .animation_3d .slide-position-1 {
+  -webkit-transform: translate3d(-980px, 0, 0);
+  -moz-transform: translate3d(-980px, 0, 0);
+  -ms-transform: translate3d(-980px, 0, 0);
+  transform: translate3d(-980px, 0, 0);
+}
+.carousel .animation_3d .slide-position-2 {
+  -webkit-transform: translate3d(-1960px, 0, 0);
+  -moz-transform: translate3d(-1960px, 0, 0);
+  -ms-transform: translate3d(-1960px, 0, 0);
+  transform: translate3d(-1960px, 0, 0);
+}
+.carousel .animation_3d .slide-position-3 {
+  -webkit-transform: translate3d(-2940px, 0, 0);
+  -moz-transform: translate3d(-2940px, 0, 0);
+  -ms-transform: translate3d(-2940px, 0, 0);
+  transform: translate3d(-2940px, 0, 0);
+}
+.carousel .animation_3d .slide-position-4 {
+  -webkit-transform: translate3d(-3920px, 0, 0);
+  -moz-transform: translate3d(-3920px, 0, 0);
+  -ms-transform: translate3d(-3920px, 0, 0);
+  transform: translate3d(-3920px, 0, 0);
+}
+.carousel .animation_3d .slide-position-5 {
+  -webkit-transform: translate3d(-4900px, 0, 0);
+  -moz-transform: translate3d(-4900px, 0, 0);
+  -ms-transform: translate3d(-4900px, 0, 0);
+  transform: translate3d(-4900px, 0, 0);
+}
+.carousel .animation_3d .slide-position-6 {
+  -webkit-transform: translate3d(-5880px, 0, 0);
+  -moz-transform: translate3d(-5880px, 0, 0);
+  -ms-transform: translate3d(-5880px, 0, 0);
+  transform: translate3d(-5880px, 0, 0);
+}
+.carousel .animation_3d .slide-position-7 {
+  -webkit-transform: translate3d(-6860px, 0, 0);
+  -moz-transform: translate3d(-6860px, 0, 0);
+  -ms-transform: translate3d(-6860px, 0, 0);
+  transform: translate3d(-6860px, 0, 0);
+}
+.carousel .animation_3d .slide-position-8 {
+  -webkit-transform: translate3d(-7840px, 0, 0);
+  -moz-transform: translate3d(-7840px, 0, 0);
+  -ms-transform: translate3d(-7840px, 0, 0);
+  transform: translate3d(-7840px, 0, 0);
+}
+.carousel .animation_3d .slide-position-9 {
+  -webkit-transform: translate3d(-8820px, 0, 0);
+  -moz-transform: translate3d(-8820px, 0, 0);
+  -ms-transform: translate3d(-8820px, 0, 0);
+  transform: translate3d(-8820px, 0, 0);
+}
+.carousel .animation_3d .slide-position-10 {
+  -webkit-transform: translate3d(-9800px, 0, 0);
+  -moz-transform: translate3d(-9800px, 0, 0);
+  -ms-transform: translate3d(-9800px, 0, 0);
+  transform: translate3d(-9800px, 0, 0);
+}
+.carousel .animation_3d .slide-position-11 {
+  -webkit-transform: translate3d(-10780px, 0, 0);
+  -moz-transform: translate3d(-10780px, 0, 0);
+  -ms-transform: translate3d(-10780px, 0, 0);
+  transform: translate3d(-10780px, 0, 0);
+}
+.carousel .animation_3d .slide-position-12 {
+  -webkit-transform: translate3d(-11760px, 0, 0);
+  -moz-transform: translate3d(-11760px, 0, 0);
+  -ms-transform: translate3d(-11760px, 0, 0);
+  transform: translate3d(-11760px, 0, 0);
+}
+.carousel .animation_3d .slide-position-13 {
+  -webkit-transform: translate3d(-12740px, 0, 0);
+  -moz-transform: translate3d(-12740px, 0, 0);
+  -ms-transform: translate3d(-12740px, 0, 0);
+  transform: translate3d(-12740px, 0, 0);
+}
+.carousel .animation_3d .slide-position-14 {
+  -webkit-transform: translate3d(-13720px, 0, 0);
+  -moz-transform: translate3d(-13720px, 0, 0);
+  -ms-transform: translate3d(-13720px, 0, 0);
+  transform: translate3d(-13720px, 0, 0);
+}
+.carousel .animation_3d .slide-position-15 {
+  -webkit-transform: translate3d(-14700px, 0, 0);
+  -moz-transform: translate3d(-14700px, 0, 0);
+  -ms-transform: translate3d(-14700px, 0, 0);
+  transform: translate3d(-14700px, 0, 0);
+}
+.carousel .animation_3d .slide-position-16 {
+  -webkit-transform: translate3d(-15680px, 0, 0);
+  -moz-transform: translate3d(-15680px, 0, 0);
+  -ms-transform: translate3d(-15680px, 0, 0);
+  transform: translate3d(-15680px, 0, 0);
+}
+.carousel .animation_3d .slide-position-17 {
+  -webkit-transform: translate3d(-16660px, 0, 0);
+  -moz-transform: translate3d(-16660px, 0, 0);
+  -ms-transform: translate3d(-16660px, 0, 0);
+  transform: translate3d(-16660px, 0, 0);
+}
+.carousel .animation_3d .slide-position-18 {
+  -webkit-transform: translate3d(-17640px, 0, 0);
+  -moz-transform: translate3d(-17640px, 0, 0);
+  -ms-transform: translate3d(-17640px, 0, 0);
+  transform: translate3d(-17640px, 0, 0);
+}
+.carousel .animation_3d .slide-position-19 {
+  -webkit-transform: translate3d(-18620px, 0, 0);
+  -moz-transform: translate3d(-18620px, 0, 0);
+  -ms-transform: translate3d(-18620px, 0, 0);
+  transform: translate3d(-18620px, 0, 0);
+}
+
+
+.carousel .animation_2d .slide-position-0 {
+  -webkit-transform: translateX(0px);
+  -moz-transform: translateX(0px);
+  -ms-transform: translateX(0px);
+  transform: translateX(0px);
+}
+.carousel .animation_2d .slide-position-1 {
+  -webkit-transform: translateX(-980px);
+  -moz-transform: translateX(-980px);
+  -ms-transform: translateX(-980px);
+  transform: translateX(-980px);
+}
+.carousel .animation_2d .slide-position-2 {
+  -webkit-transform: translateX(-1960px);
+  -moz-transform: translateX(-1960px);
+  -ms-transform: translateX(-1960px);
+  transform: translateX(-1960px);
+}
+.carousel .animation_2d .slide-position-3 {
+  -webkit-transform: translateX(-2940px);
+  -moz-transform: translateX(-2940px);
+  -ms-transform: translateX(-2940px);
+  transform: translateX(-2940px);
+}
+.carousel .animation_2d .slide-position-4 {
+  -webkit-transform: translateX(-3920px);
+  -moz-transform: translateX(-3920px);
+  -ms-transform: translateX(-3920px);
+  transform: translateX(-3920px);
+}
+.carousel .animation_2d .slide-position-5 {
+  -webkit-transform: translateX(-4900px);
+  -moz-transform: translateX(-4900px);
+  -ms-transform: translateX(-4900px);
+  transform: translateX(-4900px);
+}
+.carousel .animation_2d .slide-position-6 {
+  -webkit-transform: translateX(-5880px);
+  -moz-transform: translateX(-5880px);
+  -ms-transform: translateX(-5880px);
+  transform: translateX(-5880px);
+}
+.carousel .animation_2d .slide-position-7 {
+  -webkit-transform: translateX(-6860px);
+  -moz-transform: translateX(-6860px);
+  -ms-transform: translateX(-6860px);
+  transform: translateX(-6860px);
+}
+.carousel .animation_2d .slide-position-8 {
+  -webkit-transform: translateX(-7840px);
+  -moz-transform: translateX(-7840px);
+  -ms-transform: translateX(-7840px);
+  transform: translateX(-7840px);
+}
+.carousel .animation_2d .slide-position-9 {
+  -webkit-transform: translateX(-8820px);
+  -moz-transform: translateX(-8820px);
+  -ms-transform: translateX(-8820px);
+  transform: translateX(-8820px);
+}
+.carousel .animation_2d .slide-position-10 {
+  -webkit-transform: translateX(-9800px);
+  -moz-transform: translateX(-9800px);
+  -ms-transform: translateX(-9800px);
+  transform: translateX(-9800px);
+}
+.carousel .animation_2d .slide-position-11 {
+  -webkit-transform: translateX(-10780px);
+  -moz-transform: translateX(-10780px);
+  -ms-transform: translateX(-10780px);
+  transform: translateX(-10780px);
+}
+.carousel .animation_2d .slide-position-12 {
+  -webkit-transform: translateX(-11760px);
+  -moz-transform: translateX(-11760px);
+  -ms-transform: translateX(-11760px);
+  transform: translateX(-11760px);
+}
+.carousel .animation_2d .slide-position-13 {
+  -webkit-transform: translateX(-12740px);
+  -moz-transform: translateX(-12740px);
+  -ms-transform: translateX(-12740px);
+  transform: translateX(-12740px);
+}
+.carousel .animation_2d .slide-position-14 {
+  -webkit-transform: translateX(-13720px);
+  -moz-transform: translateX(-13720px);
+  -ms-transform: translateX(-13720px);
+  transform: translateX(-13720px);
+}
+.carousel .animation_2d .slide-position-15 {
+  -webkit-transform: translateX(-14700px);
+  -moz-transform: translateX(-14700px);
+  -ms-transform: translateX(-14700px);
+  transform: translateX(-14700px);
+}
+.carousel .animation_2d .slide-position-16 {
+  -webkit-transform: translateX(-15680px);
+  -moz-transform: translateX(-15680px);
+  -ms-transform: translateX(-15680px);
+  transform: translateX(-15680px);
+}
+.carousel .animation_2d .slide-position-17 {
+  -webkit-transform: translateX(-16660px);
+  -moz-transform: translateX(-16660px);
+  -ms-transform: translateX(-16660px);
+  transform: translateX(-16660px);
+}
+.carousel .animation_2d .slide-position-18 {
+  -webkit-transform: translateX(-17640px);
+  -moz-transform: translateX(-17640px);
+  -ms-transform: translateX(-17640px);
+  transform: translateX(-17640px);
+}
+.carousel .animation_2d .slide-position-19 {
+  -webkit-transform: translateX(-18620px);
+  -moz-transform: translateX(-18620px);
+  -ms-transform: translateX(-18620px);
+  transform: translateX(-18620px);
+}

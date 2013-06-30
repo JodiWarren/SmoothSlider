@@ -1,0 +1,62 @@
+$slide-width: 980px;
+
+.carousel {
+	.viewport { 
+		float: left;
+		width: 960px;
+		height: 330px;
+		overflow: hidden;
+		position: relative;
+	}
+	.carousel-wrapper {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		position: absolute;
+		left: 0;
+		top: 0;
+		@include transition-property(transform);
+		@include transition-duration(1s);
+		@include transition-timing-function(ease-in-out);
+	}
+	.carousel-slide{
+		float: left;
+		margin: 0 20px 0 0;
+		height: 330px;
+		width: 960px;
+	}
+	.carousel-pager {
+		overflow:hidden;
+		list-style: none;
+		clear: both;
+		margin: 0 0 0 45px;
+		li {
+			float: left;
+			width: 33%;
+		}
+	}
+	.animation_3d {
+		.carousel-wrapper {
+			@include translate3d(0, 0, 0);
+		}
+
+		@for $i from 0 to 20 {
+			.slide-position-#{$i} {
+				$slide-position: $slide-width*($i)*-1;
+				@include translate3d($slide-position, 0, 0);
+			}
+		}
+	}
+	.animation_2d {
+		.carousel-wrapper {
+			@include translateX(0);
+		}
+
+		@for $i from 0 to 20 {
+			.slide-position-#{$i} {
+				$slide-position: $slide-width*($i)*-1;
+				@include translateX($slide-position);
+			}
+		}
+	}
+}
