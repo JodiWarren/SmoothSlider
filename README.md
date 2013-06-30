@@ -1,4 +1,4 @@
-# SmoothSlider
+# SmoothSlider - v0.1
 
 ## Overview
 
