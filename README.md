@@ -18,10 +18,10 @@ $('.carousel').smoothSlider();
 
 or with options like:
 ```js
-	$('.carousel').smoothSlider({
-		slideElement: '.carousel-slide',
-		animation: 'jquery'
-	});
+$('.carousel').smoothSlider({
+	slideElement: '.carousel-slide',
+	animation: 'jquery'
+});
 ```
 
 The default options are:
@@ -42,32 +42,32 @@ $('.carousel').smoothSlider({
 The HTML should be in the following structure:
 
 ```html
-	<div class="carousel">
-		<div class="viewport">
-			<div class="carousel-wrapper">
-				<div class="carousel-slide">
-					<img src="http://placekitten.com/960/330" alt="kitty!">
-				</div>
-				<div class="carousel-slide">
-					<img src="http://placekitten.com/g/960/330" alt="kitty!">
-				</div>
-				<div class="carousel-slide">
-					<img src="http://placekitten.com/960/330" alt="kitty!">
-				</div>
+<div class="carousel">
+	<div class="viewport">
+		<div class="carousel-wrapper">
+			<div class="carousel-slide">
+				<img src="http://placekitten.com/960/330" alt="kitty!">
+			</div>
+			<div class="carousel-slide">
+				<img src="http://placekitten.com/g/960/330" alt="kitty!">
+			</div>
+			<div class="carousel-slide">
+				<img src="http://placekitten.com/960/330" alt="kitty!">
 			</div>
 		</div>
-		<ul class="pager">
-			<li>
-				<a data-slide-target="0" href="#">Slide 1</a>
-			</li>
-			<li>
-				<a data-slide-target="1" href="#">Slide 2</a>
-			</li>
-			<li>
-				<a data-slide-target="2" href="#">Slide 3</a>
-			</li>
-		</ul>
 	</div>
+	<ul class="pager">
+		<li>
+			<a data-slide-target="0" href="#">Slide 1</a>
+		</li>
+		<li>
+			<a data-slide-target="1" href="#">Slide 2</a>
+		</li>
+		<li>
+			<a data-slide-target="2" href="#">Slide 3</a>
+		</li>
+	</ul>
+</div>
 ```
 
 Note that the pager data targets are 0-based, so slide 1 is target 0, slide 2 is target 1, etc. 
@@ -82,48 +82,48 @@ To use the CSS animation, you need to include a bit of CSS. An SCSS file and com
 
 Notice the `$slide-width` variable at the top:
 ```scss
-	$slide-width: 980px;
+$slide-width: 980px;
 ```
 As well as the two crucial loops:
 ```scss
-	@for $i from 0 to 20 {
-		.slide-position-#{$i} {
-			$slide-position: $slide-width*($i)*-1
-			@include translate3d($slide-position, 0, 0);
-		}
+@for $i from 0 to 20 {
+	.slide-position-#{$i} {
+		$slide-position: $slide-width*($i)*-1
+		@include translate3d($slide-position, 0, 0);
 	}
+}
 ```
 and
 ```scss
-	@for $i from 0 to 20 {
-		.slide-position-#{$i} {
-			$slide-position: $slide-width*($i)*-1
-			@include translateX($slide-position);
-		}
+@for $i from 0 to 20 {
+	.slide-position-#{$i} {
+		$slide-position: $slide-width*($i)*-1
+		@include translateX($slide-position);
 	}
+}
 ```
 Note that one of them uses translate3d, for hardware-accelerated 3D animation, and one uses translateX, for normal 2D animation. 
 
 These output CSS a bit like this:
 ```css
-	.fp-carousel .animation_3d .slide-position-0 {
-		-webkit-transform: translate3d(0px, 0, 0);
-		-moz-transform: translate3d(0px, 0, 0);
-		-ms-transform: translate3d(0px, 0, 0);
-		-o-transform: translate3d(0px, 0, 0);
-		transform: translate3d(0px, 0, 0); }
-	.fp-carousel .animation_3d .slide-position-1 {
-		-webkit-transform: translate3d(-980px, 0, 0);
-		-moz-transform: translate3d(-980px, 0, 0);
-		-ms-transform: translate3d(-980px, 0, 0);
-		-o-transform: translate3d(-980px, 0, 0);
-		transform: translate3d(-980px, 0, 0); }
-	.fp-carousel .animation_3d .slide-position-2 {
-		-webkit-transform: translate3d(-1960px, 0, 0);
-		-moz-transform: translate3d(-1960px, 0, 0);
-		-ms-transform: translate3d(-1960px, 0, 0);
-		-o-transform: translate3d(-1960px, 0, 0);
-		transform: translate3d(-1960px, 0, 0); }
+.fp-carousel .animation_3d .slide-position-0 {
+	-webkit-transform: translate3d(0px, 0, 0);
+	-moz-transform: translate3d(0px, 0, 0);
+	-ms-transform: translate3d(0px, 0, 0);
+	-o-transform: translate3d(0px, 0, 0);
+	transform: translate3d(0px, 0, 0); }
+.fp-carousel .animation_3d .slide-position-1 {
+	-webkit-transform: translate3d(-980px, 0, 0);
+	-moz-transform: translate3d(-980px, 0, 0);
+	-ms-transform: translate3d(-980px, 0, 0);
+	-o-transform: translate3d(-980px, 0, 0);
+	transform: translate3d(-980px, 0, 0); }
+.fp-carousel .animation_3d .slide-position-2 {
+	-webkit-transform: translate3d(-1960px, 0, 0);
+	-moz-transform: translate3d(-1960px, 0, 0);
+	-ms-transform: translate3d(-1960px, 0, 0);
+	-o-transform: translate3d(-1960px, 0, 0);
+	transform: translate3d(-1960px, 0, 0); }
 ```
 Gosh! What a fuss! What's all that about? Well, I'll tell you. That's how the sliding on the slider works. We set the slide-position-*x* class, and it moves the right amount. 
 
@@ -133,24 +133,24 @@ I am generating rules for up to 20 slides by default, but you can change that to
 
 If you can't be bothered with all that SCSS stuff, just take the following code block, tweak it to your liking, and whack it through something like http://c2c.briangonzalez.org/
 ```scss
-	$slide-width: 980px;
-	.animation_3d {
-		@for $i from 0 to 20 {
-			> .slide-position-#{$i} {
-				$slide-position: $slide-width*($i)*-1;
-				@include translateX($slide-position);
-			}
+$slide-width: 980px;
+.animation_3d {
+	@for $i from 0 to 20 {
+		> .slide-position-#{$i} {
+			$slide-position: $slide-width*($i)*-1;
+			@include translateX($slide-position);
 		}
 	}
+}
 
-	.animation_2d{
-		@for $i from 0 to 20 {
-			> .slide-position-#{$i} {
-				$slide-position: $slide-width*($i)*-1;
-				@include translate3d($slide-position, 0, 0);
-			}
+.animation_2d{
+	@for $i from 0 to 20 {
+		> .slide-position-#{$i} {
+			$slide-position: $slide-width*($i)*-1;
+			@include translate3d($slide-position, 0, 0);
 		}
 	}
+}
 ```
 ## Todo
 
