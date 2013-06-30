@@ -12,17 +12,21 @@ If automatic animation type is left on, it will gracefully degrade from 3D accel
 
 Call it like so:
 
-	$('.carousel').smoothSlider();
+```js
+$('.carousel').smoothSlider();
+```
 
 or with options like:
-
+```js
 	$('.carousel').smoothSlider({
 		slideElement: '.carousel-slide',
 		animation: 'jquery'
 	});
+```
 
 The default options are:
 
+```js
 $('.carousel').smoothSlider({
 	slideWrapper: '.carousel-wrapper', 	// This is the wrapper that sits inside the viewport.
 	slideElement: '.carousel-slide', 	// This is the identifier for individual slides.
@@ -31,11 +35,13 @@ $('.carousel').smoothSlider({
 	transitionTime: 500,				// This is how long jQuery takes to switch between slides - remember to sync up your CSS with this value
 	animation: 'auto'					// Best to leave on default. You can override and hard-set any of the following: "2d", "3d", or "jquery"
 });
+```
 
 ## HTML
 
 The HTML should be in the following structure:
 
+```html
 	<div class="carousel">
 		<div class="viewport">
 			<div class="carousel-wrapper">
@@ -62,6 +68,7 @@ The HTML should be in the following structure:
 			</li>
 		</ul>
 	</div>
+```
 
 Note that the pager data targets are 0-based, so slide 1 is target 0, slide 2 is target 1, etc. 
 
@@ -74,31 +81,31 @@ You need to include some CSS. I've pointedly not made SmoothSlider automatically
 To use the CSS animation, you need to include a bit of CSS. An SCSS file and compiled CSS is included.
 
 Notice the `$slide-width` variable at the top:
-	
+```scss
 	$slide-width: 980px;
-
+```
 As well as the two crucial loops:
-
+```scss
 	@for $i from 0 to 20 {
 		.slide-position-#{$i} {
 			$slide-position: $slide-width*($i)*-1
 			@include translate3d($slide-position, 0, 0);
 		}
 	}
-
+```
 and
-
+```scss
 	@for $i from 0 to 20 {
 		.slide-position-#{$i} {
 			$slide-position: $slide-width*($i)*-1
 			@include translateX($slide-position);
 		}
 	}
-
+```
 Note that one of them uses translate3d, for hardware-accelerated 3D animation, and one uses translateX, for normal 2D animation. 
 
 These output CSS a bit like this:
-
+```css
 	.fp-carousel .animation_3d .slide-position-0 {
 		-webkit-transform: translate3d(0px, 0, 0);
 		-moz-transform: translate3d(0px, 0, 0);
@@ -117,7 +124,7 @@ These output CSS a bit like this:
 		-ms-transform: translate3d(-1960px, 0, 0);
 		-o-transform: translate3d(-1960px, 0, 0);
 		transform: translate3d(-1960px, 0, 0); }
-
+```
 Gosh! What a fuss! What's all that about? Well, I'll tell you. That's how the sliding on the slider works. We set the slide-position-*x* class, and it moves the right amount. 
 
 To set it up for your slide width, just change the slide-width variable to your slide's width **including** border, padding and margin. For instance, a 420px slide with a 1px border on either side, 10px of padding on either side, and a 20px right-hand margin should come out at: `420 + (1px x 2) + (10px x 2) + 20px = 462px` per slide.
@@ -125,7 +132,7 @@ To set it up for your slide width, just change the slide-width variable to your 
 I am generating rules for up to 20 slides by default, but you can change that too. See the "from 0 to 20" bit? Change the 20 to your target number.
 
 If you can't be bothered with all that SCSS stuff, just take the following code block, tweak it to your liking, and whack it through something like http://c2c.briangonzalez.org/
-
+```scss
 	$slide-width: 980px;
 	.animation_3d {
 		@for $i from 0 to 20 {
@@ -144,7 +151,7 @@ If you can't be bothered with all that SCSS stuff, just take the following code 
 			}
 		}
 	}
-
+```
 ## Todo
 
 There's loads to do.
