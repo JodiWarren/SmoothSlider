@@ -70,7 +70,7 @@
 		smoothSlider.changeClass = function(){
 			smoothSlider.wrapper.removeClass(
 				function (index, css) {
-					return (smoothSlider.match (/slide-position-\d+/g) || []).join(' ');
+					return (css.match (/slide-position-\d+/g) || []).join(' ');
 				}
 			).addClass('slide-position-'+smoothSlider.next_slide);
 
