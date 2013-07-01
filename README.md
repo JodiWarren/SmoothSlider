@@ -29,11 +29,11 @@ The default options are:
 ```js
 $('.carousel').smoothSlider({
 	slideWrapper: '.carousel-wrapper', 	// This is the wrapper that sits inside the viewport.
-	slideElement: '.carousel-slide', 	// This is the identifier for individual slides.
-	pagerElement: '.carousel-pager', 	// These allow you to navigate to individual pages.
-	intervalTime: 3000, 				// This is the time that it stays on each slide
-	transitionTime: 500,				// This is how long jQuery takes to switch between slides - remember to sync up your CSS with this value
-	animation: 'auto'					// Best to leave on default. You can override and hard-set any of the following: "2d", "3d", or "jquery"
+	slideElement: '.carousel-slide', 		// This is the identifier for individual slides.
+	pagerElement: '.carousel-pager', 		// These allow you to navigate to individual pages.
+	intervalTime: 3000, 								// This is the time that it stays on each slide
+	transitionTime: 500,								// This is how long jQuery takes to switch between slides - remember to sync up your CSS with this value
+	animation: 'auto'										// Best to leave on default. You can override and hard-set any of the following: "2d", "3d", or "jquery"
 });
 ```
 
